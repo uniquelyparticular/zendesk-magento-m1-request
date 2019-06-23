@@ -40,7 +40,7 @@ export class createClient {
     const uri: string = `${store_url}${version}/index.php/${removeLeadingSlash(
       path
     )}`;
-    console.log('uri', uri);
+    // console.log('uri', uri);
 
     const customHeaders = {
       ...classHeaders,
