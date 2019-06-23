@@ -1,0 +1,60 @@
+{
+  "name": "@particular./zendesk-magento-m1-request",
+  "version": "0.0.0-semantic-release",
+  "author": "Adam Grohs <info@uniquelyparticular.com> (https://uniquelyparticular.com)",
+  "owner": "Particular.",
+  "description": "Please contact Particular. via info@uniquelyparticular.com for any questions",
+  "homepage": "https://github.com/uniquelyparticular/zendesk-magento-m1-request#readme",
+  "repository": "github:uniquelyparticular/zendesk-magento-m1-request",
+  "keywords": [
+    "magento",
+    "magento1",
+    "m1",
+    "ecommerce",
+    "api",
+    "node",
+    "typescript",
+    "javascript",
+    "particular",
+    "particular."
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc -d",
+    "clean": "rimraf dist",
+    "clean-install": "yarn clean; yarn install --force",
+    "test": "jest --passWithNoTests",
+    "semantic-release": "semantic-release"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "cross-fetch": "3.0.4"
+  },
+  "devDependencies": {
+    "@types/fetch-mock": "7.3.1",
+    "@types/jest": "24.0.15",
+    "chai": "4.2.0",
+    "fetch-everywhere": "1.0.5",
+    "fetch-mock": "7.3.3",
+    "husky": "2.4.1",
+    "jest": "24.8.0",
+    "prettier": "1.18.2",
+    "pretty-quick": "1.11.1",
+    "rimraf": "2.6.3",
+    "semantic-release": "15.13.16",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
