@@ -10,7 +10,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: shopify-request-{{ checksum "package.json" }}
+          key: zendesk-magento-m1-request-{{ checksum "package.json" }}
   test:
     docker:
       - image: 'circleci/node:lts'
@@ -18,7 +18,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - shopify-request-{{ checksum "package.json" }}
+            - zendesk-magento-m1-request-{{ checksum "package.json" }}
       - run: yarn build
       - run: yarn test
   release:
@@ -28,7 +28,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - shopify-request-{{ checksum "package.json" }}
+            - zendesk-magento-m1-request-{{ checksum "package.json" }}
       - run: yarn build
       - run: npx semantic-release
 workflows:
