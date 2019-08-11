@@ -66,7 +66,7 @@ export class createClient {
       headers,
       ...(data && body)
     });
-    console.log('m1, response', response);
+    console.log('Magento M1, response', response);
 
     if (response.status === 204) return response.text();
 
