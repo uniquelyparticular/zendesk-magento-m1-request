@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 
 import { InitOptions, Options, Headers, Fetch } from './types';
-import { removeLeadingSlash } from './utils';
+import { removeLeadingSlash, removeTrailingSlash } from './utils';
 
 export class createClient {
   private access_token: string;
@@ -14,7 +14,7 @@ export class createClient {
     this.fetch = options.fetch ? options.fetch : fetch;
 
     this.options = {
-      store_url,
+      store_url: removeTrailingSlash(store_url),
       store_code,
       ...others
     };
