@@ -36,8 +36,8 @@ export class createClient {
       }
     } = this;
 
-    const version: string = store_code ? `/${store_code}` : '';
-    const uri: string = `${store_url}${version}/index.php/${removeLeadingSlash(
+    const version: string = store_code ? `${store_code}/` : '';
+    const uri: string = `${store_url}/index.php/${version}${removeLeadingSlash(
       path
     )}`;
     // console.log('uri', uri);
