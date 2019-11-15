@@ -458,10 +458,10 @@
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
-"@types/fetch-mock@7.3.1":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-7.3.1.tgz#df7421e8bcb351b430bfbfa5c52bb353826ac94f"
-  integrity sha512-2U4vZWHNbsbK7TRmizgr/pbKe0FKopcxu+hNDtIBDiM1wvrKRItybaYj7VQ6w/hZJStU/JxRiNi5ww4YDEvKbA==
+"@types/fetch-mock@7.3.2":
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-7.3.2.tgz#58805ba36a9357be92cc8c008dbfda937e9f7d8f"
+  integrity sha512-NCEfv49jmDsBAixjMjEHKVgmVQlJ+uK56FOc+2roYPExnXCZDpi6mJOHQ3v23BiO84hBDStND9R2itJr7PNoow==
 
 "@types/glob@^7.1.1":
   version "7.1.1"
@@ -2045,14 +2045,15 @@ fetch-everywhere@1.0.5:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-fetch-mock@7.3.9:
-  version "7.3.9"
-  resolved "https://registry.yarnpkg.com/fetch-mock/-/fetch-mock-7.3.9.tgz#a80fd2a1728f72e0634ef7a9734bc61200096487"
-  integrity sha512-PgsTbiQBNapFz2P2UwDl3gowK3nZqfV4HdyDZ1dI4eTGGH9MLAeBglIPbyDbbNQoGYBOfla6/9uaiq7az2z4Aw==
+fetch-mock@7.7.3:
+  version "7.7.3"
+  resolved "https://registry.yarnpkg.com/fetch-mock/-/fetch-mock-7.7.3.tgz#6a3f94cfed6e423ab7f5464912982030da605335"
+  integrity sha512-I4OkK90JFQnjH8/n3HDtWxH/I6D1wrxoAM2ri+nb444jpuH3RTcgvXx2el+G20KO873W727/66T7QhOvFxNHPg==
   dependencies:
     babel-polyfill "^6.26.0"
     core-js "^2.6.9"
     glob-to-regexp "^0.4.0"
+    lodash.isequal "^4.5.0"
     path-to-regexp "^2.2.1"
     whatwg-url "^6.5.0"
 
@@ -3796,6 +3797,11 @@ lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
