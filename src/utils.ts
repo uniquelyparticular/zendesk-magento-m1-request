@@ -1,7 +1,9 @@
-export function removeLeadingSlash(string: string) {
-  return string.replace(/^\/+/, '');
-}
+export const ensureString = (string: string) => (string ? `${string}` : '');
 
-export function removeTrailingSlash(string: string) {
-  return string.replace(/\/$/, '');
-}
+export const removeLeadingSlash = (string: string) => {
+  return ensureString(string).replace(/^\/+/, '');
+};
+
+export const removeTrailingSlash = (string: string) => {
+  return ensureString(string).replace(/\/$/, '');
+};
