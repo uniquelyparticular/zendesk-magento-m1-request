@@ -9,13 +9,12 @@ export class createClient {
   public fetch?: Fetch;
 
   constructor(options: InitOptions) {
-    const { access_token, store_url, store_code, ...others } = options;
+    const { access_token, store_url, ...others } = options;
     this.access_token = access_token;
     this.fetch = options.fetch ? options.fetch : fetch;
 
     this.options = {
       store_url: removeTrailingSlash(store_url),
-      store_code,
       ...others
     };
   }
@@ -30,14 +29,16 @@ export class createClient {
       options: {
         application,
         store_url,
+        api_version,
         store_code,
         currency,
         headers: classHeaders
       }
     } = this;
 
-    const version: string = store_code ? `${store_code}/` : '';
-    const uri: string = `${store_url}/index.php/${version}${removeLeadingSlash(
+    const version: string = api_version ? `${api_version}/` : '';
+    const storeCode: string = store_code ? `${store_code}/` : '';
+    const uri: string = `${store_url}/index.php/${storeCode}${removeLeadingSlash(
       path
     )}`;
     // console.log('uri', uri);
@@ -52,6 +53,7 @@ export class createClient {
       authorization: `Token token="${this.access_token}"`,
       'X-API-KEY': this.access_token,
       'X-MAGENTO-M1-SDK-LANGUAGE': 'JS-REQUEST',
+      ...(version && { 'X-API-VERSION': version }),
       ...(application && { 'X-MAGENTO-M1-APPLICATION': application }),
       ...(currency && { 'X-MAGENTO-M1-CURRENCY': currency }),
       ...customHeaders

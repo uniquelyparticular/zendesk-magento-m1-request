@@ -1,6 +1,7 @@
 export interface InitOptions {
   access_token: string;
   store_url: string;
+  api_version?: string;
   store_code?: string;
   currency?: string;
   fetch?: Fetch;
@@ -10,6 +11,7 @@ export interface InitOptions {
 
 export interface Options {
   store_url: string;
+  api_version?: string;
   store_code?: string;
   currency?: string;
   fetch?: Fetch;
