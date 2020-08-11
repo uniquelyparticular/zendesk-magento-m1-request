@@ -37,22 +37,22 @@
     }
   },
   "dependencies": {
-    "cross-fetch": "^3.0.5"
+    "cross-fetch": "3.0.5"
   },
   "devDependencies": {
-    "@types/fetch-mock": "^7.3.2",
-    "@types/jest": "^26.0.9",
+    "@types/fetch-mock": "7.3.2",
+    "@types/jest": "26.0.9",
     "chai": "4.2.0",
     "fetch-everywhere": "1.0.5",
-    "fetch-mock": "^9.10.6",
-    "husky": "^4.2.5",
-    "jest": "^26.3.0",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "rimraf": "^3.0.2",
-    "semantic-release": "^17.1.1",
-    "ts-jest": "^26.2.0",
-    "typescript": "^3.9.7"
+    "fetch-mock": "9.10.6",
+    "husky": "4.2.5",
+    "jest": "26.3.0",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "rimraf": "3.0.2",
+    "semantic-release": "17.1.1",
+    "ts-jest": "26.2.0",
+    "typescript": "3.9.7"
   },
   "publishConfig": {
     "access": "public"
