@@ -36,12 +36,10 @@ export class createClient {
       }
     } = this;
 
-    const version: string = api_version ? `${api_version}/` : '';
     const storeCode: string = store_code ? `${store_code}/` : '';
     const uri: string = `${store_url}/index.php/${storeCode}${removeLeadingSlash(
       path
     )}`;
-    // console.log('uri', uri);
 
     const customHeaders = {
       ...classHeaders,
@@ -53,7 +51,7 @@ export class createClient {
       authorization: `Token token="${this.access_token}"`,
       'X-API-KEY': this.access_token,
       'X-MAGENTO-M1-SDK-LANGUAGE': 'JS-REQUEST',
-      ...(version && { 'X-API-VERSION': version }),
+      ...(api_version && { 'X-API-VERSION': api_version }),
       ...(application && { 'X-MAGENTO-M1-APPLICATION': application }),
       ...(currency && { 'X-MAGENTO-M1-CURRENCY': currency }),
       ...customHeaders
